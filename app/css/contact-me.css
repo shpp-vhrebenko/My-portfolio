@@ -1,0 +1,181 @@
+/* COMMON PAGE STYLE */
+
+.contactmebox {
+    background: #eff3f7;
+    border-radius: 4px;
+    margin-bottom: 26px;
+}
+
+.contactmebox .contactmebox-header {
+    width: 100%;
+    height: 120px;
+    line-height: 120px;
+    background: #48cbe8;
+    border-bottom: 15px solid #67dffa;
+    border-radius: 4px 4px 0 0;
+    font-family: 'fira_sansbook';
+    margin-bottom: 40px;
+}
+
+.contactmebox-header h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+.contactmebox-body {
+    padding: 0 120px 20px 120px;
+}
+/* COMMON PAGE STYLE END */
+
+/* FORM */
+::placeholder {
+    color: #48cbe8;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #48cbe8;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #48cbe8;
+}
+
+.btn {
+    width: 35%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-family: 'fira_sansbook';
+    font-size: 19px;
+    color: #fff;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.input-item input,
+.input-item textarea {
+    background: #fff;
+    border: 1px solid #48cbe8;
+    border-radius: 4px;
+    font-family: 'fira_sanslight';
+    font-size: 13px;
+    color: #48cbe8;
+}
+
+.input-item input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding-left: 5px;
+}
+
+.input-item input:focus,
+.input-item textarea:focus {
+    outline: none;
+}
+
+.input-item textarea {
+    display: block;
+    width: 100%;
+    height: 180px;
+    background: #fff;
+    border-radius: 4px;
+    font-family: 'fira_sanslight';
+    font-size: 13px;
+    color: #48cbe8;
+    padding: 15px;
+}
+
+.input-item label {
+    font-size: 19px;
+    color: #b3b8c2;
+}
+
+.users_data {
+    margin-bottom: 15px;
+}
+
+.input-item.userName {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+
+.input-item.userEmail {
+    float: left;
+    width: 48%;
+}
+
+.input-item.userMessage {
+    margin-bottom: 15px;
+}
+
+.captcha-box {
+    margin-bottom: 20px;
+}
+
+.captcha-box label {
+    font-size: 19px;
+    color: #b3b8c2;
+}
+
+.captcha-wrapper {
+    float: left;
+    width: 190px;
+    height: 80px;
+    background: #fff;
+    border: 1px solid #48cbe8;
+    border-radius: 4px;
+}
+
+.input-item.uCaptcha {
+    position: relative;
+    float: right;
+    width: 50%;
+    height: 80px;
+}
+
+.input-item.uCaptcha input {
+    position: absolute;
+    height: 30px;
+    top: 50%;
+    margin-top: -15px;
+}
+
+.buttons-box .submit-button {
+    float: left;
+    background: #48cbe8;
+    -webkit-border-radius: 7;
+    -moz-border-radius: 7;
+    border-radius: 7px;
+    -webkit-box-shadow: 0px 4px 3px #3ba8c0;
+    -moz-box-shadow: 0px 4px 3px #3ba8c0;
+    box-shadow: 0px 4px 3px #3ba8c0;
+    transition: all .2s ease;
+}
+
+.buttons-box .submit-button:hover {
+    background: #3db1cb;
+}
+
+.buttons-box .clear-button {
+    float: right;
+    background: #849db5;
+    -webkit-border-radius: 7;
+    -moz-border-radius: 7;
+    border-radius: 7px;
+    -webkit-box-shadow: 0px 4px 3px #687b8f;
+    -moz-box-shadow: 0px 4px 3px #687b8f;
+    box-shadow: 0px 4px 3px #687b8f;
+    transition: all .2s ease;
+}
+
+.buttons-box .clear-button:hover {
+     background: #687c8f;
+}
+
+
+
+/* END FORM */

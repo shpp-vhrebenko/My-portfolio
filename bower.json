@@ -1,0 +1,8 @@
+{
+  "name": "portfolio.loc",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize-css": "normalize.css#^7.0.0",
+    "modernizer": "^2.8.2"
+  }
+}

@@ -1,0 +1,144 @@
+.form-auth-wrapper {
+    width: 600px;
+    height: 485px;
+    margin: 0 auto;
+    margin-top: 15vh;
+    background: #eff3f7;
+    border-radius: 7px;
+}
+
+.form-auth-wrapper header {
+    height: 105px;
+    background: #48cbe8;
+    border-radius: 7px 7px 0 0;
+    border-bottom: 15px solid #67dffa;
+    text-align: center;
+}
+
+.form-auth-wrapper header h4 {
+    font-family: 'fira_sansbook';
+    font-size: 40px;
+    height: 105px;
+    line-height: 105px;
+    color: #fff;
+}
+
+.form-auth {
+    padding: 20px 85px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-item {
+  margin-bottom: 15px;
+}
+
+.input-item:nth-child(2) {
+  margin-bottom: 35px;
+}
+
+.input-item label {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-family: 'fira_sanslight';
+    font-size: 36px;
+    color: #959aa8;
+    cursor: pointer;
+}
+
+.input-item input {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #48cbe8;
+    border-radius: 4px;
+    padding-left: 10px;
+    color: #48cbe8;
+}
+
+.input-item input.error {
+    background: #fdd5d2;
+}
+
+.error-tooltip {
+  position: absolute;
+  display: inline-block;
+  top: 30px;
+  right: 100%; 
+  color: #FFFFFF;
+  background: #f97e76;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+  visibility: hidden;
+  border-radius: 4px;
+  font-family: 'fira_sansbook';
+  font-size: 15px;
+  padding: 1px 15px;
+}
+
+.input-item .error-tooltip:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -8px;
+  width: 0; height: 0;
+  border-left: 8px solid #f97e76;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.input-item input.error + .error-tooltip {
+  visibility: visible;
+  opacity: 0.8;
+  margin-top: -15px;
+  margin-right: 15px;
+  z-index: 999;
+}
+
+.input-item input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: #48cbe8;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #48cbe8;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #48cbe8;
+}
+
+.auth-button {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: 'fira_sansbook';
+    font-size: 36px;
+    color: #fff;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background: #48cbe8;
+    -webkit-border-radius: 7;
+    -moz-border-radius: 7;
+    border-radius: 7px;
+    -webkit-box-shadow: 0px 4px 3px #3ba8c0;
+    -moz-box-shadow: 0px 4px 3px #3ba8c0;
+    box-shadow: 0px 4px 3px #3ba8c0;
+    transition: all .2s ease;
+}
+
+.auth-button:hover {
+    background: #3db1cb;
+}

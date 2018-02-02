@@ -1,0 +1,131 @@
+/* COMMON PAGE STYLE */
+
+.myworkbox {
+    background: #eff3f7;
+    border-radius: 4px;
+    margin-bottom: 26px;
+}
+
+.myworkbox .myworkbox-header {
+    font-family: 'fira_sansbook';
+    font-size: 27px;
+    font-weight: normal;
+    color: #3ba8c0;
+    border-bottom: 2px #3ba8c0 solid;
+    margin:  0 0 23px 0;
+    padding:  13px 23px;
+    display: inline-block;
+}
+
+.myworkbox-body {
+    width: 650px;
+    padding: 0 20px;
+}
+
+.myworkbox-item {
+    width: 185px;
+    min-height: 210px;
+    max-height: 210px;
+    overflow: hidden;
+    margin-bottom: 22px;
+    text-align: center;
+    border-radius: 4px;
+    display:  inline-block;
+    margin-right: 22px;
+    vertical-align: top;
+}
+
+.myworkbox-item:nth-child(3n+3) {
+    margin-right: 0;
+}
+
+.workimage-wrapper {
+    position: relative;
+    max-height: 130px;
+    min-height: 130px;
+    overflow:  hidden;
+    border:  2px solid #73c0d1;
+    border-radius: 4px;
+    background: #edf8fc;
+    margin-bottom: 5px;
+}
+
+.myworkbox-item.add-newwork .workimage-wrapper{
+    border: 2px dashed #73c0d1;
+    font-family: 'fira_sanslight';
+    font-size: 12px;
+    color: #73c0d1;
+    padding-top: 20%;
+}
+
+.myworkbox-item.add-newwork i{
+    font-size: 1.8rem;
+}
+
+/* COMMON PAGE STYLE END */
+
+.workimage-wrapper,
+.overlay {
+    text-align: center;
+}
+
+.work-image {
+    width: 100%;
+}
+
+.work-image,
+.overlay {
+  transition: .3s all;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #4191bb;
+    color: white;
+    opacity: 0;
+    padding-top: 30%;
+}
+
+.work-image-link {
+    display: inline-block;
+    padding: 0 2px;
+    font-family: 'fira_sansbook';
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+
+.workimage-wrapper .overlay:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.mywork-link {
+    text-decoration: none;
+    color: #3ba8c0;
+    font-family: 'fira_sanslight_italic';
+    font-size: 12px;
+}
+
+.mywork-link:hover {
+    text-decoration: underline;
+}
+
+.mywork-description {
+    height: 48px;
+    width: 100%;
+}
+
+.mywork-description {
+    font-family: 'fira_sanslight';
+    font-size: 14px;
+    color: #4a545d;
+    padding: 2px;
+}
+
