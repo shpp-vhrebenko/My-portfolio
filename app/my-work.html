@@ -63,7 +63,7 @@
               </nav>
             </aside>
             <div class="content">
-              <section class="myworkbox">
+              <section class="myworkbox" id="myworkbox">
                 <h2 class="myworkbox-header">Мои работы</h2>
                 <div class="myworkbox-body clearfix">
                   <div class="myworkbox-item">
@@ -128,14 +128,49 @@
                   </div>
                   <div class="myworkbox-item add-newwork">
                     <div class="workimage-wrapper">
-                      <i class="fa fa-picture-o" aria-hidden="true"></i>
-                      <h3 class="add-new-project">Добавить проект</h3>
-                      <div class="overlay">
-                      </div>
+                      <a class="fa fa-picture-o add-new-item" href="#" id="add-new-item" aria-hidden="true"><span>Добавить проект</span></a>
                     </div>
                   </div>
                 </div>
               </section>
+              <div id="new-progect-popup">
+                <div class="modal-wrapper">
+                  <div class="modal-header">
+                    <h4 class="modal-title">Добавление проекта</h4>
+                    <button type="button" class="b-close fa fa-times-circle-o"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="add-new-project" role="form" class="form-new-project">
+                      <div class="server-mes error-mes"></div>
+                      <div class="server-mes success-mes"></div>
+                      <div class="form-group">
+                        <label for="projectName" class="label">Название проетка</label>
+                        <input id="projectName" name="projectName" type="text" placeholder="Введите название проекта" qtip-content="Вы не ввели название контента" class="input">
+                      </div>
+                      <div class="form-group">
+                        <div class="fileupload-wrapper" id="uploadfile">
+                          <span class="label">Картинка проекта</span>
+                          <label class="fileupload-lable">
+                            <span class="fa fa-cloud-download button-fileupload"></span>
+                            <input type="file" name="files[]" class="fileupload" id="fileupload">
+                            <input type="text" name="filename" placeholder="Загрузите изображение" disabled qtip-content="Вы не выбрали изображение" class="input-filename" id="filename">
+                            <input type="hidden" name="fileurl" id="fileurl">
+                          </label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="projectUrl" class="label">URL проетка</label>
+                        <input id="projectUrl" name="projectUrl" type="text" placeholder="Введите url проекта" qtip-content="Вы не ввели url проекта" class="input">
+                      </div>
+                      <div class="form-group">
+                        <label for="projectDescription" class="label">Описание проетка</label>
+                        <textarea id="projectDescription" name="projectDescription" type="text" placeholder="Введите описание проекта" qtip-content="Вы не ввели описание проекта" class="input input-textarea"></textarea>
+                      </div>
+                      <input type="submit" id="submit-new-project" class="button-add-new-project" value="Добавить">
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -149,6 +184,8 @@
         </div>
       </footer>
       <script type="text/javascript" src="bower/jquery/dist/jquery.js"></script>
-      <script type="text/javascript" src="js/main.js"></script>
+      <script type="text/javascript" src="bower/bPopup/jquery.bpopup.js"></script>
+      <script type="text/javascript" src="js/app_project.js"></script>
+      <script type="text/javascript" src="js/my-work-form.js"></script>
     </body>
 </html>

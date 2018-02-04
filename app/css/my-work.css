@@ -58,8 +58,17 @@
     padding-top: 20%;
 }
 
-.myworkbox-item.add-newwork i{
+.add-new-item {    
+    text-decoration: none;
+    color: #73c0d1;
     font-size: 1.8rem;
+}
+
+.add-new-item span {
+    display: block;
+    font-family: 'fira_sansbook';
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 /* COMMON PAGE STYLE END */
@@ -102,8 +111,8 @@
 }
 
 .workimage-wrapper .overlay:hover {
-    cursor: pointer;
-    opacity: 0.7;
+   /*  cursor: pointer;
+   opacity: 0.6; */
 }
 
 .mywork-link {
@@ -128,4 +137,217 @@
     color: #4a545d;
     padding: 2px;
 }
+
+/* MODAL WINDOW */
+
+.server-mes {
+    width: 100%;
+    min-height: 40px;
+    padding: 5px;
+    background: #f2cccd;
+    border-radius: 4px;
+    font-family: 'fira_sansbook';
+    font-size: 16px;
+    display: none;
+    margin-bottom: 10px;
+}
+
+.server-mes.error-mes {
+    color: #f8908a;
+    background: #f2cccd;
+    border: 1px solid #f97e76;
+}
+
+.server-mes.success-mes {
+    color: #49bb7b;
+    background: #b8e1ce;
+    border: 1px solid #49bb7b;
+}
+
+.server-mes:last-child {
+    margin-bottom: 20px;
+}
+
+#new-progect-popup {
+    display: none;
+}
+
+.modal-wrapper {
+    width: 360px;
+    background: #eff3f7;
+    border-radius: 4px 4px 0 0;
+}
+
+.modal-wrapper .modal-header {
+    position: relative;
+    background: #48cbe8;
+    border-bottom: 7px solid #67dffa;
+    height: 40px;
+    border-radius: 4px 4px 0 0;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+.modal-header .modal-title {
+    line-height: 40px;
+    font-family: 'fira_sansregular';
+    font-size: 20px;
+    color: #fff;
+}
+
+.modal-header .b-close {
+    position: absolute;
+    top: 0%;
+    right: 2%;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 0 20px 20px 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group .label {
+    font-family: 'fira_sansbook';
+    font-size: 16px;
+    color: #b0b4bf;
+}
+
+.form-group .input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #48cbe8;
+    border-radius: 4px;
+    color: #48cbe8;
+    font-family: 'fira_sanslight';
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: #48cbe8;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #48cbe8;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #48cbe8;
+}
+
+.fileupload-lable {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    font-size: 16px;
+    border: 1px solid #48cbe8;
+    border-radius: 4px;
+    color: #48cbe8;
+}
+
+.fileupload-lable .button-fileupload, .fileupload-lable > .input-filename{
+    display: block;
+    cursor: pointer;
+}
+
+.fileupload-lable .button-fileupload {
+    float: right;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 20%;
+    height: 100%;
+    font-size: 2rem;
+    background: #48cbe8;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    transition: all .2s ease;
+}
+
+.fileupload-lable:hover .button-fileupload {
+    background: #40b7d1;
+}
+
+.fileupload-lable .button-fileupload:hover {
+    background: #40b7d1;
+}
+
+.fileupload-lable input[type=file]{
+    width: 80%;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.fileupload-lable .input-filename {
+    width: 80%;
+    height: 40px;
+    font-family: 'fira_sanslight';
+    font-size: 16px;
+    border: none;
+    background: #fff;
+    padding-left: 10px;
+    color: #48cbe8;
+}
+
+@media only screen and ( max-width: 500px ){
+    .fileupload-lable > .input-filename{
+        display: none
+    }
+    .fileupload-lable .button{
+        width: 100%
+    }
+}
+
+.form-group textarea.input {
+    height: 110px;
+    padding: 10px;
+}
+
+.button-add-new-project {
+    display: block;
+    width: 40%;
+    height: 35px;
+    margin: 0 auto;
+    background: #48cbe8;
+    border: none;
+    font-family: 'fira_sansbook';
+    font-size: 19px;
+    color: #fff;
+    border-bottom: 2px solid #3ba8c0;
+    cursor: pointer;
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 4px 3px #3ba8c0;
+    -moz-box-shadow: 0px 4px 3px #3ba8c0;
+    box-shadow: 0px 4px 3px #3ba8c0;
+}
+
+.button-add-new-project:hover {
+  background: #3caec7;
+  text-decoration: none;
+}
+
+
+
 
