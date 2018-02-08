@@ -13,6 +13,7 @@
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <!-- bower CSS -->
         <link rel="stylesheet" type="text/css" href="bower/normalize-css/normalize.css">
+        <link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
         <!-- fonts CSS -->
         <link rel="stylesheet" type="text/css" href="fonts/fira/fira.css">
         <link rel="stylesheet" type="text/css" href="fonts/Proxima-Nova-Semibold/proxima.css">
@@ -68,33 +69,46 @@
                   <h2>У Вас интересный проект? Напишите мне.</h2>
                 </div>
                 <div class="contactmebox-body clearfix">
-                  <form>
+                  <form id="contact-me">
                     <div class="row users_data">
-                      <div class="input-item userName">
+                      <div class="form-group userName">
                         <label for="uName">Имя</label>
-                        <input type="text" id="uName" name="userName" placeholder="Как к Вам обращаться">
+                        <input  type="text" 
+                                id="uName" 
+                                name="userName" 
+                                placeholder="Как к Вам обращаться"
+                                qtip-content="Вы не ввели имя">
                       </div>
-                      <div class="input-item userEmail">
+                      <div class="form-group userEmail">
                         <label for="uEmail">Email</label>
-                        <input type="email" id="uEmail" name="userEmail" placeholder="Куда мне писать">
+                        <input  type="email" 
+                                id="uEmail" 
+                                name="userEmail" 
+                                placeholder="Куда мне писать"
+                                qtip-content="Вы не ввели email"
+                                qtip-position="right">
                       </div>
                     </div>
-                    <div class="input-item userMessage">
-                      <label for="uMessage">Сообщение</label>
-                      <textarea id="uMessage" name="uMessage" placeholder="Кратко в чем суть.." style="height:180px"></textarea>
+                    <div class="form-group userMessage">
+                      <label for="uMessage">Сообщение</label>                     
+                      <textarea placeholder="Кратко в чем суть.." id="uMessage" name="uMessage" qtip-content="Что вы от меня хотели" ></textarea>
                     </div>
-                    <div class="row captcha-box">
+                    <div class="row">
                       <label for="uCaptcha">Введите код указаный на картинке</label>
                       <div class="captcha-wrapper">
                         <img src="" alt="">
                       </div>
-                      <div class="input-item uCaptcha">
-                        <input type="text" id="uCaptcha" placeholder="Введите код">
+                      <div class="form-group uCaptcha">
+                        <input  type="text" 
+                                id="uCaptcha" 
+                                placeholder="Введите код"
+                                qtip-position="right"
+                                qtip-content="Вы не ввели код">
                       </div>
                     </div>
-                    <div class="row buttons-box">
-                      <input type="button" class="btn submit-button" value="Отправить">
-                      <input type="button" class="btn clear-button" value="Очистить">                    </div>
+                    <div class="row">
+                      <input type="submit" class="btn submit-button pull-left" value="Отправить">
+                      <input type="reset" class="btn clear-button pull-right" value="Очистить">                    </div>
                     
                   </form>
                 </div>
@@ -112,6 +126,9 @@
         </div>
       </footer>
       <script type="text/javascript" src="bower/jquery/dist/jquery.js"></script>
+      <script type="text/javascript" src="bower/qtip2/jquery.qtip.js"></script>      
       <script type="text/javascript" src="js/main.js"></script>
+      <script type="text/javascript" src="js/validation.js"></script>
+      <script type="text/javascript" src="js/contact_me.js"></script>
     </body>
 </html>

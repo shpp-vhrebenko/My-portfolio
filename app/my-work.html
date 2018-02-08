@@ -88,7 +88,7 @@
                     </div>
                     <a href="#" class="mywork-link">www.site.ua</a>
                     <div class="mywork-description">
-                      Информация о проекте. Информация о проекте.
+                      Информация о проекте. Информация о проекте. Информация о проекте.
                     </div>
                   </div>
                   <div class="myworkbox-item">
@@ -138,7 +138,7 @@
                 <div class="modal-wrapper">
                   <div class="modal-header">
                     <h4 class="modal-title">Добавление проекта</h4>
-                    <button type="button" class="b-close fa fa-times-circle-o"></button>
+                    <button type="button" id="b-close" class="b-close fa fa-times-circle-o"></button>
                   </div>
                   <div class="modal-body">
                     <form id="add-new-project" role="form" class="form-new-project">
@@ -163,11 +163,11 @@
                         <label for="projectUrl" class="label">URL проетка</label>
                         <input id="projectUrl" name="projectUrl" type="text" placeholder="Введите url проекта" qtip-content="Вы не ввели url проекта" class="input">
                       </div>
-                      <div class="form-group">
+                      <div class="form-group projectDescription">
                         <label for="projectDescription" class="label">Описание проетка</label>
-                        <textarea id="projectDescription" name="projectDescription" type="text" placeholder="Введите описание проекта" qtip-content="Вы не ввели описание проекта" class="input input-textarea"></textarea>
+                        <textarea id="projectDescription" name="projectDescription" type="text" placeholder="Введите описание проекта" qtip-content="Вы не ввели описание проекта" ></textarea>
                       </div>
-                      <input type="submit" id="submit-new-project" class="button-add-new-project" value="Добавить">
+                      <input type="submit" id="submit-new-project" class="btn submit-button pull-center" value="Добавить">
                     </form>
                   </div>
                 </div>
@@ -187,6 +187,8 @@
       <script type="text/javascript" src="bower/jquery/dist/jquery.js"></script>
       <script type="text/javascript" src="bower/bPopup/jquery.bpopup.js"></script>
       <script type="text/javascript" src="bower/qtip2/jquery.qtip.js"></script>
+      <script type="text/javascript" src="js/truncate-text.js"></script>
+      <script type="text/javascript" src="js/validation.js"></script>
       <script type="text/javascript" src="js/app_project.js"></script>
       <script type="text/javascript" src="js/my-work-form.js"></script>
     </body>

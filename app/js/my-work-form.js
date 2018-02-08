@@ -30,6 +30,7 @@ $(function(){
     }).change();
 
 });
+
 $( window ).resize(function(){
     $( ".file_upload input" ).triggerHandler( "change" );
 });

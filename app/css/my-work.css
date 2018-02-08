@@ -87,18 +87,6 @@
   transition: .3s all;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: #4191bb;
-    color: white;
-    opacity: 0;
-    padding-top: 30%;
-}
-
 .work-image-link {
     display: inline-block;
     padding: 0 2px;
@@ -140,34 +128,6 @@
 
 /* MODAL WINDOW */
 
-.server-mes {
-    width: 100%;
-    min-height: 40px;
-    padding: 5px;
-    background: #f2cccd;
-    border-radius: 4px;
-    font-family: 'fira_sansbook';
-    font-size: 16px;
-    display: none;
-    margin-bottom: 10px;
-}
-
-.server-mes.error-mes {
-    color: #f8908a;
-    background: #f2cccd;
-    border: 1px solid #f97e76;
-}
-
-.server-mes.success-mes {
-    color: #49bb7b;
-    background: #b8e1ce;
-    border: 1px solid #49bb7b;
-}
-
-.server-mes:last-child {
-    margin-bottom: 20px;
-}
-
 #new-progect-popup {
     display: none;
 }
@@ -208,45 +168,6 @@
 
 .modal-body {
     padding: 0 20px 20px 20px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group .label {
-    font-family: 'fira_sansbook';
-    font-size: 16px;
-    color: #b0b4bf;
-}
-
-.form-group .input {
-    width: 100%;
-    height: 40px;
-    border: 1px solid #48cbe8;
-    border-radius: 4px;
-    color: #48cbe8;
-    font-family: 'fira_sanslight';
-    font-size: 16px;
-    padding-left: 10px;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-}
-
-::placeholder {
-    color: #48cbe8;
-    opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: #48cbe8;
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-   color: #48cbe8;
 }
 
 .fileupload-lable {
@@ -300,13 +221,11 @@
 
 .fileupload-lable .input-filename {
     width: 80%;
-    height: 40px;
-    font-family: 'fira_sanslight';
-    font-size: 16px;
-    border: none;
-    background: #fff;
-    padding-left: 10px;
-    color: #48cbe8;
+    height: 40px;  
+}
+
+.form-group.projectDescription textarea {
+    height: 110px;    
 }
 
 @media only screen and ( max-width: 500px ){
@@ -317,37 +236,4 @@
         width: 100%
     }
 }
-
-.form-group textarea.input {
-    height: 110px;
-    padding: 10px;
-}
-
-.button-add-new-project {
-    display: block;
-    width: 40%;
-    height: 35px;
-    margin: 0 auto;
-    background: #48cbe8;
-    border: none;
-    font-family: 'fira_sansbook';
-    font-size: 19px;
-    color: #fff;
-    border-bottom: 2px solid #3ba8c0;
-    cursor: pointer;
-    -webkit-border-radius: 6;
-    -moz-border-radius: 6;
-    border-radius: 6px;
-    -webkit-box-shadow: 0px 4px 3px #3ba8c0;
-    -moz-box-shadow: 0px 4px 3px #3ba8c0;
-    box-shadow: 0px 4px 3px #3ba8c0;
-}
-
-.button-add-new-project:hover {
-  background: #3caec7;
-  text-decoration: none;
-}
-
-
-
 

@@ -3,11 +3,20 @@ var myModule = (function () {
     var init = function () {
         _setUpListners();
     };
+
     // Listners events
     var _setUpListners = function () {
         $('#add-new-item').on('click', _showModal);
         $('#add-new-project').on('submit', _addNewProject);
-    };
+        $('#b-close').on('click', _clearFormAddNewProject);
+        $('.mywork-description').truncateText();
+    };    
+
+    // Clear form add new project
+    var _clearFormAddNewProject = function () {      
+        validation.clearForm('#add-new-project');
+    }
+
     // Work with modal window
     var _showModal = function (event) {
         event.preventDefault();
@@ -19,9 +28,11 @@ var myModule = (function () {
             transition: 'slideDown',
             onClose: function() {
                 form.find('.server-mes').text('').hide();
+                form.trigger('reset');               
             }
         });
     };
+
     // Add new project
     var _addNewProject = function (event) {
         event.preventDefault();
@@ -36,6 +47,7 @@ var myModule = (function () {
             if(ans.status === 'success') {
                 form.find('.server-mes').text('').hide();
                 form.find('.success-mes').text(ans.text).show();
+                // do close modal window and add new project box
             } else {
                 form.find('.server-mes').text('').hide();
                 form.find('.error-mes').text(ans.text).show();
@@ -43,9 +55,11 @@ var myModule = (function () {
         });
         
     };
+
     // Function AJAX request
     var _ajaxForm = function (form, url) {
-        //if(valid) return false;
+        if(validation.validateForm(form)) return false;
+        
         data =  form.serialize();
 
         var result =  $.ajax({
@@ -60,10 +74,7 @@ var myModule = (function () {
 
         return result;
     };
-
-
-
-
+    
     return {
         init: init
     };

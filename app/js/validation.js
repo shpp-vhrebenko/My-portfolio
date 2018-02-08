@@ -7,10 +7,19 @@ var validation = (function () {
     
     // Listners events.
     var _setUpListners = function () {
-        
+        $('form').on('keydown', '.has-error', _removeError);           
+    };
+
+    var _removeError = function () {
+        $(this).removeClass('has-error');
+    }
+
+    var clearForm = function (form) {
+        var currentForm = $(form);        
+        currentForm.find('input, textarea').trigger('hideTooltip').removeClass('has-error');
     };
     
-    var _createQtip = function () {
+    var _createQtip = function (element, position) {
         // position tooltip
         if(position === 'right') {
             position = {
@@ -44,27 +53,38 @@ var validation = (function () {
                 classes: 'qtip-mystyle qtip-rounded',
                 tip: {
                     height: 10,
-                    width: 16
+                    width: 10
                 }
             }
         }).trigger('show');
     }
 
     var validateForm = function(form) {
+        console.log("<< Validate form >>");
         var elements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]'),
             valid = true;
 
         $.each(elements, function (index, value) {
-            console.log(index);
-            console.log(val);
-        })    
+            var element = $(value),
+                val = element.val(),
+                pos = element.attr('qtip-position');                
+
+            if(val.length === 0 ){
+                element.addClass('has-error');
+                _createQtip(element, pos);
+                valid = false;
+            }
+        });
+
+        return valid;    
 
     }
 
     // Return object - publics methods.
     return {
         init: init,
-        validateForm: validateForm
+        validateForm: validateForm,
+        clearForm: clearForm
     };
 })();
 
