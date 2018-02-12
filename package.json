@@ -2,6 +2,9 @@
     "name": "portfolio.loc",
     "devDependencies": {
         "browser-sync": "^2.23.6",
-        "gulp": "^3.9.1"
-    }
+        "gulp": "^3.9.1",
+        "gulp-load-plugins": "^1.5.0",
+        "wiredep": "^4.0.0"
+    },
+    "dependencies": {}
 }

@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="UTF-8">
+        <!-- Просим IE переключиться в последний режим -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Корректное массштабирование на разных устройствах -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
         <title>Vladymyr Grebenko portfolio</title>
         <!-- SEO -->
         <meta name="description" content="portfolio">
@@ -11,14 +14,16 @@
         <!-- favicon -->
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <!-- bower CSS -->
-        <link rel="stylesheet" type="text/css" href="bower/normalize-css/normalize.css">
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower/normalize-css/normalize.css" />
+        <!-- endbower -->
         <!-- fonts CSS -->
         <link rel="stylesheet" type="text/css" href="fonts/fira/fira.css">
         <link rel="stylesheet" type="text/css" href="fonts/Proxima-Nova-Semibold/proxima.css">
         <link rel="stylesheet" type="text/css" href="fonts/font-awesome/font-awesome.css">
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/main-media.css">
         <link rel="stylesheet" type="text/css" href="css/about-me.css">
         <!-- modernizer -->
         <script type="text/javascript" src="bower/modernizer/modernizr.js"></script>
@@ -48,7 +53,8 @@
                 <li class="socials-item">
                   <a href="http://github.com/shpp-vhrebenko github" class="socials-link gb" target="_blank">github.com</a>
                 </li>
-            </ul>
+              </ul>
+              <a href="#" class="icon-navigation fa fa-bars" id="js_bars"></a>
             </div>
           </header>
           <div class="container">
@@ -158,6 +164,19 @@
               </section>
             </div>
           </div>
+          <div class="footer-contacts contacts">
+                <ul class="contacts-list">
+                  <li class="contacts-item contactsmessage">
+                    <a href ="mailto:vhrebenko@gmail.com" class="contacts-link "><i class="fa fa-envelope-o" aria-hidden="true"></i><span>vhrebenko@gmail.com</span></a>
+                  </li>
+                  <li class="contacts-item contactsphone">
+                    <a href ="tel:+3(095)3697128" class="contacts-link "><i class="fa fa-phone" aria-hidden="true"></i><span>+3(095)3697128</span></a>
+                  </li>
+                  <li class="contacts-item contactsskype">
+                    <a href="callto:vhrebenko" class="contacts-link "><i class="fa fa-skype" aria-hidden="true"></i><span>vhrebenko</span></a>
+                  </li>
+                </ul>
+          </div>
         </div>
       </div>
       <footer class="page-footer">
@@ -168,6 +187,14 @@
           <div class="copyright">© 2018, Vladymyr Grebenko</div>
         </div>
       </footer>
+      <!-- bower:js -->
+      <script src="bower/jquery/dist/jquery.js"></script>
+      <script src="bower/bPopup/jquery.bpopup.js"></script>
+      <script src="bower/ev-emitter/ev-emitter.js"></script>
+      <script src="bower/imagesloaded/imagesloaded.js"></script>
+      <script src="bower/qtip2/jquery.qtip.js"></script>
+      <script src="bower/qtip2/basic/jquery.qtip.js"></script>
+      <!-- endbower -->
       <script type="text/javascript" src="bower/jquery/dist/jquery.js"></script>
       <script type="text/javascript" src="js/main.js"></script>
     </body>
